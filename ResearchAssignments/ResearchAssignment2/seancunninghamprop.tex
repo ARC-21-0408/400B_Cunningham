@@ -1,0 +1,77 @@
+
+
+\documentclass{aastex63}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+\graphicspath{{./}{figures/}}
+
+
+
+\begin{document}
+
+\title{ASTR 400B Research Proposal}
+
+\author{Sean Cunningham}
+
+\section{Introduction} 
+
+As MW and M31 move closer together and will eventually collide, an important topic to understand is how the structure of the MW and M31 will change as this interaction occurs. This includes how the MW and M31 tidal tails will evolve throughout the galaxy merging process.
+
+Understanding how the MW and M31 tidal tails will evolve is important to galaxy evolution because we want to know what is going to happen to our galaxy as we begin to merge with M31. This will allow us to create with simulations to predict the interaction and analyze the morphology of the two galaxies. We then can expand these simulations to other galaxies that will go through their own mergers and see how their morphology will change.
+
+Our current understanding of tidal tails are that when we look at a pair of galaxies and there are peculiarities in the structure of the galaxies, tidal interactions are usually to blame \citep{1972ApJ...178..623T}. In the paper \cite{1972ApJ...178..623T}, Toomre and Toomre found that tidal forces don't just create broad features but the tides can create create thin structures as well. To create tail evolution simulations, we use N-body and hydrodynamic calculations. This includes gas cooling, star formation, and supernova feedback. We also deduced that "dissipative mergers can account for the central concentration of starbursts between merger remnants" \citep{refId0}. At high redshifts, many star forming regions can be associated with galaxies merging \citep{Privon_2013}. Since dust and gas during the merging process are being compressed and the density is increased, galaxy merging redistribute and trigger bursts of star formation. Currently we are trying to improve the accuracy of our simulations to improve our understanding of the physics that occurs within any given galaxy.
+
+One of the hardest questions that we are still struggling to answer is how to model dust.  Modelling dust is hard and most simulations today are done by either ignoring dust or making the particles non-interacting. There is still a large gap between theoretical modeling and the observational models we can see. Properties beyond the internal structures like magnitudes and colors are rarely studied due to the difficulty of modeling dust. The amount of time the merger tail remnants remain after the galaxies merge are still being investigated due to the fact that we need deeper images to see the structures. Another question that is currently still being looked at is whether or not galaxy mergers under go through an Ultraluminious Infrared Galaxy Phase (ULIRG) which is limited by star formation. Figure~\ref{fig:Snapl} shows a series of snapshots of NGC 5257/8 and how its tidal tail evolves. 
+
+
+\section{Proposal}
+
+\subsection{Questions I will be Addressing}
+
+Questions I plan on addressing with this project will be using simulation data from \citet{2012ApJ...753....9V} to understand the kinematics of the tidal tails over time and whether the tidal tails change in velocity dispersion and energy. I will be looking at the morphology change of the tidal tails over time and investigating if they grow in size. 
+
+\subsection{How Will I Approach the Problem using my Simulation Data}
+
+I plan on picking a random point in the MW or M31 and let the simulation run and see if the separation and velocity dispersion are any different from other points in the MW or M31. For example, we have run the simulation for HW6 to see the orbit of the COM of MW, M31, and M33. I will pick a random point on the edge of the disk of either MW or M31 and see if that orbit differs drastically from the orbit we obtained in HW6. To obtain the structure of the tails I will use Lab 7 to create histograms of the galaxies and use the contour level definitions to map out the structure. 
+
+
+
+
+
+\subsection{Hypothesis}
+
+I believe that I will find that the structure of the tidal tails will start out by being pulled by the tidal forces as MW and M31 get close to each other. The tidal tails will become drastic as the two galaxies dance around one another but after MW and M31 merge, the tidal tails will eventually merge back with the merger remnant. This is because as the two galaxies get closer to one another, the gas and stars at the outer edges of both MW and M31 will feel a stronger pull towards the other galaxy. This will cause the dust and stars to appear to be stripped and form long tails that extend from the parent galaxies. Since these stars will gain speed from being pulled, the gas and stars will be have more acceleration than the rest of the galaxy and will create a drastic tail resulting from the collision. This will only get more drastic as MW and M31 pass through each other several times. Once the two galaxies finally merge. The tail will slowly be absorbed back into the merger remnant because gas and dust will be slowed down due to collisions. Eventually the system will calm down and become part of the merger remnant.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.35\columnwidth]{NGC5257_EVO.png}
+    
+    \caption{
+            \label{fig:Snapl}
+            A series of snapshots from \citet{refId0} of the evolution of NGC 5257/8 from 500 Myr ago and predicts what it will look like in 1250 Myr based on their dynamical models. This figure shows how the tidal tails evolve through the merging process.}
+    
+\end{figure} 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.25\columnwidth]{MyPic.jpeg}
+    
+    \caption{
+            \label{fig:Diagraml}
+            This figure shows what I think the separation and velocity dispersion will look like for a particle that is part of the tidal tail. It is clearly different than the COM separation and velocity calculated in HW6.}
+    
+\end{figure} 
+
+
+
+
+%put the name of the .bib file in {} For this, it is Biography.bib so put %Bibliography in here
+\bibliography{Bibliography}{}
+\bibliographystyle{aasjournal}
+
+
+
+\end{document}
+
+
