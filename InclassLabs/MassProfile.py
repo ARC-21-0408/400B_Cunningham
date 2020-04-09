@@ -17,7 +17,7 @@ import matplotlib
 
 # my modules
 from ReadFile import Read
-from CenterOfMass import CenterOfMass
+from CenterOfMass2 import CenterOfMass
 
 
 # Gravitational Constant
