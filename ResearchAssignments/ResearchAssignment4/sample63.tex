@@ -1,0 +1,86 @@
+
+
+\documentclass{aastex63}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+\graphicspath{{./}{figures/}}
+
+
+
+\begin{document}
+
+\title{Tidal Tail Evolution of the MW and M31}
+
+\author{Sean Cunningham}
+
+\section{Introduction} 
+
+As the MW and M31 move closer together and eventually collide, we have the opportunity to understand how the structure of these galaxies will change as this interaction occurs. This interaction produces a structure known as a tidal tail. When two galaxies get very close, the gravitational force from the two galaxies will strip and redistribute gas and stars outside the Jacobi radius into elongated structures that protrude from the galaxy. Stars outside the Jacobi radius, or Roche limit,  will become unbound and will co-orbit the second galaxy. 
+
+When we look at a pair of galaxies and there are peculiarities in the structure of the galaxies, tidal interactions are one of first areas to be explored as a possible solution to the peculiarities \citep{1972ApJ...178..623T}. In the paper \cite{1972ApJ...178..623T}, Toomre and Toomre found that tidal forces don't just create broad features but the tides can create thin structures as well. Current simulations use N-body calculations that also include gas cooling, star formation, and supernova feedback to simulate the tidal tail evolution. In \citep{Privon_2013} "dissipative mergers can account for the central concentration of starbursts between merger remnants." At high redshifts, many star forming regions can be associated with galaxies merging \citep{Privon_2013}. Since dust and gas during the merging process are being compressed and the density is increased, galaxy merging redistribute the metals making it easier to trigger bursts of star formation. Currently we are trying to improve the accuracy of our simulations to improve our understanding of the physics that occurs within any given galaxy.
+
+Understanding how the MW and M31 tidal tails will evolve is important to galaxy evolution because we actually know the position, velocity, mass profiles, and disk orientation of the MW and M31. Unlike other galaxies mergers where those quantities are estimated based on observations. Knowing these quantities will allow us to create simulations using the most realistic set up to predict the interaction and analyze the morphology of the two galaxies. We then can expand these simulations to other galaxies that will go through their own mergers and see how their morphology will change. This will improve our estimations and obtain more accurate simulations for other galaxy mergers.
+
+One of the hardest questions that we are still struggling to answer is how to model dust. Most simulations today are done by ignoring dust but there is currently a lot of work being done to try to understand the role of dust. There is still a large gap between theoretical modeling and the observational models we can see. Properties beyond the internal structures like magnitudes and colors are rarely studied due to the difficulty of modeling dust. The amount of time the merger tail remnants remain after the galaxies merge are still being investigated due to the fact that we need deeper images to see the structures. Another question that is currently still being looked at is whether or not galaxy mergers go through an Ultraluminious Infrared Galaxy Phase (ULIRG) which is limited by star formation. Figure~\ref{fig:Snapl} shows a series of snapshots of NGC 5257/8 and how its tidal tail evolves. 
+
+
+\section{This Proposal}
+
+In this paper I will study the formation and structure of the tidal tails created by the MW and M31 over time. I plan on addressing with this project will be using simulation data from \citet{2012ApJ...753....9V} to understand the kinematics of the tidal tails created during the merging of the MW and M31 over time and whether the tidal tails change in velocity dispersion and energy. I will be looking at the change in morphology of the MW and M31 tidal tails over time. Specifically I will investigate whether the tails grow in size. 
+
+This is important because as the tidal tails from the MW and M31 change, they redistribute the dust that is located located near the center of the two galaxies to form stellar halos and make star formation easier. Using this most realistic data set we have for this simulation we can get very accurate predictions on how star formation is affected due to the tidal tails. This will then let us be able to more accurately predict the evolution of star formation in other galaxies going through their own merging process.
+
+\newpage
+
+
+
+\section{Methodology}
+
+Using the simulation data from \citep{2012ApJ...753....9V}, I will create a a collisionless N-body simulation to model the MW and M31 over time and see how they and their tidal tails evolve. N-body simulations are where there are N number of objects that all interact with each other with forces such as gravity. 
+
+I will select tidal tail particles that are outside the Jacobi radius and use Lab 10 to determine the snapshot before the first close encounter. Then I will let the simulation run and track the stars though out the merging process. Figure~\ref{fig:Diagraml} shows a similar process where I choose a set of stars and track them some snapshot later. I will then use the density contour definitions to obtain the structure of the tails.
+
+Calculations I will need to compute are the Jacobi radius and an index for stars outside the Jacobi radius. My code will also compute the position and velocity of the particles I choose using the index. The Jacobi radius is, 
+
+\begin{equation} \label{eq:1}
+    R_{j}=R_2 (\frac{2M_1}{M_2})^{1/3}
+\end{equation}
+where $R_2$ is the radius of the secondary object, $M_1$ is the mass of the primary object, and $M_2$ is the mass of the secondary object. 
+
+The plots I will make are similar to figure~\ref{fig:Diagraml} except the rectangle will select stars outside the Jacobi radius and I will see where the stars end up after some snapshot. Another plot I will need will be one using the density contour definitions to obtain the structure of the MW and M31 tidal tails. This will let me see how the change in morphology will evolve over time. 
+
+I believe that I will find that the structure of the tidal tails will start out by being pulled by the tidal forces as MW and M31 get close to each other. The tidal tails will become drastic and some stars that started outside the Jacobi radius will fly off as the two galaxies dance around one another but after MW and M31 merge, the tidal tails will eventually merge back with the merger remnant. This is because as the two galaxies get closer to one another, the stars at the outer edges of both MW and M31 will feel a stronger pull towards the other galaxy. This will cause stars to appear to be stripped and form long tails that extend from the parent galaxies. Since these stars will gain speed from being pulled, the stars will have more acceleration than the rest of the galaxy and will create a drastic tail resulting from the collision. This will only get more drastic as MW and M31 pass through each other several times. Once the two galaxies finally merge. The tail will slowly be absorbed back into the merger remnant because bound stars will become relax. Eventually the system will calm down and become part of the merger remnant.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.55\columnwidth]{NGC5257_EVO.png}
+    
+    \caption{
+            \label{fig:Snapl}
+            A series of snapshots from \citet{refId0} of the evolution of NGC 5257/8 from 500 Myr ago and predicts what it will look like in 1250 Myr based on their dynamical models. This figure shows how the tidal tails evolve through the merging process.}
+    
+\end{figure} 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\columnwidth]{AstrFig.png}
+    
+    \caption{
+            \label{fig:Diagraml}
+            This figure shows what I am planning on doing for the tail remnant where I choose a select group of stars outside the Jacobi radius and locate them at some snapshot later.}
+    
+\end{figure} 
+
+
+
+
+%put the name of the .bib file in {} For this, it is Biography.bib so put %Bibliography in here
+\bibliography{Bibliography}{}
+\bibliographystyle{aasjournal}
+
+
+
+\end{document}
+
+
