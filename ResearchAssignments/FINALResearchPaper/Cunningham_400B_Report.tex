@@ -1,0 +1,140 @@
+
+
+\documentclass{aastex63}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+\graphicspath{{./}{figures/}}
+
+
+
+\begin{document}
+
+\title{Tidal Tail Evolution of the MW During its Encounter with M31}
+\
+
+\author{Sean Cunningham}
+\affiliation{University of Arizona: Department of Astronomy}
+
+\begin{abstract}
+    The Milky Way and the Andromeda galaxy will have their first close encounter in roughly 4 Gyr and during this encounter both the MW and M31 will form tidal tail structures. Studying these tidal tail structures and how they form is important because we can use the results we obtain from this simulation to improve our estimations and predictions on other galaxy mergers. I will be exploring the morphology of the tidal tails that form in the MW during the close encounter. This includes studying the amount of stars that are outside a set radius of 30 kpc over a 0.5 Gyr period. This is important because it will tell us how many stars are interrupted due to this encounter and therefore give us an insight on the change in the internal structure of the MW. After the simulation ran for 0.5 Gyr, I found that the Jacobi radius was not the cause of the tidal tails. The resonances between the rotation direction and the orbital direction cause the tidal tails to form even when the stars remain well inside the Jacobi radius. This simulation was able to confirm theories from previous literature and this allows us to use these theories on other galaxy mergers. 
+\end{abstract}
+
+\section{Introduction} 
+
+As the MW and M31 move closer together and eventually collide, we have the opportunity to understand how the structure of these galaxies will change as this interaction occurs. This type of interaction produces a structure known as a tidal tail. When two galaxies get very close, the gravitational force from the two galaxies will strip and redistribute gas and stars outside the Jacobi radius into elongated structures that protrude from the galaxy. Stars outside the Jacobi radius, or Roche limit,  will become unbound and will co-orbit the second galaxy. 
+
+When we look at a pair of galaxies and there are peculiarities in the structure of the galaxies, tidal interactions are one of first areas to be explored as a possible solution to the peculiarities \citep{1972ApJ...178..623T}. In the paper \cite{1972ApJ...178..623T}, Toomre and Toomre found that tidal forces don't just create broad features but can create thin structures as well. Current simulations use N-body calculations that also include gas cooling, star formation, and supernova feedback to simulate the tidal tail evolution. In \citet{Privon_2013} "dissipative mergers can account for the central concentration of starbursts between merger remnants." At high redshifts, many star forming regions can be associated with galaxies merging \citep{Privon_2013}. Since dust and gas during the merging process are being compressed and the density is increased, galaxies merging redistribute the metals making it easier to trigger bursts of star formation. Currently we are trying to improve the accuracy of our simulations to improve our understanding of the physics that occurs within any given galaxy.
+
+Understanding how the MW and M31 tidal tails will evolve is important to galaxy evolution because we actually know the position, velocity, mass profiles, and disk orientation of the MW and M31. Unlike other galaxies mergers where those quantities are estimated based on observations. Knowing these quantities will allow us to create simulations using the most realistic set up to predict the interaction and analyze the morphology of the two galaxies. We then can expand these simulations to other galaxies that will go through their own mergers and see how their morphology will change. This will improve our estimations and help us obtain more accurate simulations for other galaxy mergers.
+
+One of the hardest questions that we are still struggling to answer is how to model dust. Most simulations today are done by ignoring dust but there is currently a lot of work being done to try to understand the role of dust. There is still a large gap between theoretical modeling and the observational models we can see. Properties beyond the internal structures like magnitudes and colors are rarely studied due to the difficulty of modeling dust. The amount of time the merger tail remnants remain after the galaxies merge are still being investigated due to the fact that we need deeper images to see the structures. Another question that is currently still being looked at is whether or not galaxy mergers go through an Ultraluminious Infrared Galaxy Phase (ULIRG) which is limited by star formation. Figure~\ref{fig:Snapl} shows a series of snapshots of NGC 5257/8 and how its tidal tail evolves. 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{NGC5257_EVO.png}
+    
+    \caption{
+            \label{fig:Snapl}
+            A series of snapshots from \citet{refId0} of the evolution of NGC 5257/8 from 500 Myr ago and predicts what it will look like in 1250 Myr based on their dynamical models. The orbital path is show as the curved lines. This figure shows how the tidal tails evolve through the merging process.}
+    
+\end{figure} 
+
+
+\section{This Project}
+
+In this paper I will study the formation and structure of the tidal tails created by the MW. I plan on addressing this project by using simulation data from \citet{2012ApJ...753....9V} to understand the kinematics of the tidal tails created during the merging of the MW and M31 over time. I will check to see whether the objects in the tidal tail change their distance to the center of the MW. I will also be looking at the change in morphology of the MW's tidal tails over time. Specifically I will investigate whether the tails grow in size. 
+
+This is important because as the tidal tails from the MW and M31 change, they redistribute the dust that is located located near the center of the two galaxies to form stellar halos and make star formation easier. Using this most realistic data set we have for this simulation we can get very accurate predictions on how star formation is affected due to the tidal tails. This will then let us be able to more accurately predict the evolution of star formation in other galaxies going through their own merging process.
+
+
+
+
+\section{Methodology}
+
+Using the simulation data from \citet{2012ApJ...753....9V}, I will create a a collisionless N-body simulation to model the MW over time and see how its tidal tails evolve. N-body simulations are where there are N number of objects that all interact with each other with forces such as gravity. 
+
+I will select tidal tail particles that are outside a given radius of 30 kpc and use Lab 10 to determine when the tidal tails form. Then I will let the simulation run and track the stars though out the merging process. I will then plot the selected particles and their distance from the center of the MW and compare it to the Jacobi radius and see which stars are outside the Jacobi radius. I will then use the density contour definitions to obtain the structure of the tails, shown in Figure~\ref{fig:Diagraml}.After several snapshots I will use the density contour function again to determine the structure of the MW tidal tails and compare. This will let me visualize the change in morphology over time. 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{AstrFig.png}
+    
+    \caption{
+            \label{fig:Diagraml}
+            This figure shows a 2D histogram of two different snapshots of the MW. One before the merger (left) and one when the MW and M31 are merged completely (right). The density contour function shows the internal structure by placing lines throughout the image.}
+    
+\end{figure} 
+
+Calculations I will need to compute are the Jacobi radius and an index for both stars outside the Jacobi radius and outside the set radius of 30 kpc. My code will also compute the position of the particles I choose using the index. The Jacobi radius is, 
+
+\begin{equation} \label{eq:1}
+    R_{j}=R_2 (\frac{2M_1}{M_2})^{1/3}
+\end{equation}
+where $R_2$ is the distance between the two objects, $M_1$ is the mass of the satellite, and $M_2$ is the enclosed mass of the primary object. 
+
+I believe that I will find that the structure of the tidal tails will start out by being pulled by the tidal forces as the MW and M31 get close to each other. The tidal tails will become drastic and some stars that started outside the Jacobi radius will fly off as the two galaxies dance around one another but after MW and M31 merge, the tidal tails will eventually merge back with the merger remnant. The stars will appear to be stripped because as the two galaxies approach one another, the stars at the outer edges of both MW and M31 will feel a stronger pull towards the other galaxy. This will cause stars to be stretched from the parent body and form long tails. Since these stars will gain speed from being pulled, the stars will have a higher acceleration than the rest of the stars in the galaxy and this will create a drastic tail resulting from the collision. This will only get more drastic as MW and M31 pass through each other several times.
+
+\section{Results}
+
+Figure~\ref{fig:Beg} shows the MW before the encounter with M31. There are no tidal tail structures yet and stars outside a radius of 30 kpc are highlighted in red. The plot on the right of figure~\ref{fig:Beg} shows the selected stars in red and their distance from the center of the MW. The plot on the right also shows a majority of the stars outside the 30 kpc radius are outside the Jacobi radius which is 26.92 kpc. The mean radius of the selected particles is marked in red at 32.7 kpc and the standard deviation is only about 3.3 kpc. The density contour function shows the internal structure of the MW on the left and in this snapshot, there appears to be very little visible structure. 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{Beg.png}
+    
+    \caption{
+            \label{fig:Beg}
+            This figure shows a 2D histogram of the MW (left) at 3.9 Gyr. This is just before the encounter with M31. No tidal tails have formed yet. Stars marked in red are stars outside a selected radius of 30 kpc. The density contour function is showing the internal structure of the MW. The histogram (right) shows the stars marked in red and their distance from the center of the MW. The red vertical line is the mean radius of all the selected stars and its standard deviation is shown in the label. The Jacobi radius is not shown due to it being out of the bounds of the plot.}
+    
+\end{figure} 
+
+Figure~\ref{fig:Mid} shows the MW about 0.4 Gyr after the initial collision with M31. Tidal tails have clearly formed which are clearly seen as the two protruding structures above and below the MW. There are more stars outside the 30 kpc radius and their distances from the center are shown on the right plot. The plot of the right also shows that a vast majority of the stars are inside the Jacobi radius and yet the tails are still forming. The mean radius of the selected particles is marked in red at 37.4 kpc and the standard deviation is 6.6 kpc. Comparing to figure~\ref{fig:Beg}, the standard deviation increased by around 3 kpc and the number of stars per bin increased tremendously. At 3.9 Gyr, the max number of stars per bin is around 35 while in figure~\ref{fig:Mid} the max number per bin is around 900. The density contour function shows the clear structure of the tails. 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{Mid.png}
+    
+    \caption{
+            \label{fig:Mid}
+            This figure shows a 2D histogram of the MW (left) at 4.3 Gyr where the tidal tails have clearly formed and a histogram (right) showing the selected stars, marked in red on the left plot, and their distance from the center of the MW. The density contour function is showing the internal structure of the MW. The red vertical line is the mean radius of all the selected stars and its standard deviation is shown in the label. The Jacobi radius is designated as the orange vertical line.}
+    
+\end{figure} 
+
+Figure~\ref{fig:End} shows the MW at 4.6 Gyr. The tidal tails appear to have thinned but extended out to a larger radius. It also appears that the MW is no longer a flat disk evident by some selected stars that are outside the 30 kpc radius being directly over the center of the MW. There also appears to be even more stars outside the 30 kpc radius as the maximum stars per single bin is now around 1400. A majority of the stars still remain inside the Jacobi radius. The mean radius is now around 42.9 kpc and a standard deviation of 17.1 kpc which is significantly larger than the previous snapshots. The density contour shows that the structure of the tidal tails have receded back into the MW but many stars still remain outside the 30 kpc radius and appear to still maintain the shape of the tidal tail.  
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{End.png}
+    
+    \caption{
+            \label{fig:End}
+            This figure shows a 2D histogram of the MW (left) at 4.6 Gyr where the tidal tails have appeared to have evolved and decreased in size. The MW is no longer a relatively flat disk as stars greater than 30 kpc appear to be in the center of the MW. The density contour function is showing the internal structure of the MW. The histogram (right) showing the selected stars, marked in red on the left plot, and their distance from the center of the MW. The red vertical line is the mean radius of all the selected stars and its standard deviation is shown in the label. The Jacobi radius is designated as the orange vertical line.}
+    
+\end{figure} 
+
+\section{Discussion} 
+
+After computing the Jacobi radius for the MW throughout the merging process, I found that only when the COM of the MW and M31 are making their close approach is when all the stars outside the 30 kpc radius are also outside the Jacobi radius. Around 4.1 Gyr is when the Jacobi radius is larger than most of the stars outside the 30 kpc radius. This is when the tidal structure is first beginning to form. For the remainder of the snapshots up until 4.6 Gyr a vast majority of the stars remain inside the Jacobi radius. The mean radius of the selected particles and the standard deviation steadily increase as more of the particles are pulled outside the 30 kpc radius. It seems like the tidal tails are 'delayed' and don't begin to form until 4.1 Gyr which is a 0.27 Gyr after the MW and M31 make contact. In 4.3 Gyr the tidal tails are still forming despite the fact all the stars are within the Jacobi radius. This means the Jacobi radius argument fails because the stars appear to be stripped when they shouldn't because they are well within the radius in which objects are bound. The Jacobi radius assumes that the system is not rotating but that is precisely the cause of tidal tails. This agrees with the current literature that the Jacobi radius argument fails to explain why tidal tails form in merging galaxies and that tidal tails form from resonances between the rotation of the disk and the orbital direction \citep{1972ApJ...178..623T}. Even though the stars are bound, the stars are kicked out due to the fact that both the MW and M31 are rotating in the same direction as their orbital direction. These results are important because they reinforces our knowledge on galaxy evolution. This simulation data allows us to use the most accurate simulation we have so far of two galaxies merging and test our theories we have about galaxy evolution and see if they remain true.   
+
+\section{Conclusion}
+
+The MW and M31 will be tidally disrupted in approximately 4 Gyr and due to this disruption tidal tails will form. Studying how these tidal structures evolve is important because we can use the results we obtain from this simulation and apply them to other galaxy mergers to get more accurate predictions. Using the simulation data from \citet{2012ApJ...753....9V} I was able to explore the MW tidal tail evolution over a period of 0.5 Gyr after its first encounter with M31. This simulation allowed me to analyze how many stars were interrupted and kicked out beyond a radius of 30 kpc by this encounter.
+
+I found that the Jacobi radius argument was not the cause of the tidal tail structure formation like I initially thought. Through the simulation I found that while the tidal tails formed, a majority of the time the particles that made up tails were well within the Jacobi radius. Confirming the failure of the Jacobi radius argument reinforced that the resonances between rotational direction and orbital direction are the cause of tidal tail formation \citep{1972ApJ...178..623T}.
+
+If I had more time with the simulation, I would have run it for a longer period of time to analyze how the tidal tails evolve when the MW and M31 merge completely. I would use the data for the selected stars outside the 30 kpc radius to calculate their velocity dispersion and their relative position to the center of the MW. I would also try find a way to make running the simulation faster. Calculating the Jacobi radius for the 14 snapshots took roughly ten minutes. If I wanted to do the same for the all the snapshots, the time spent computing them would only take longer and require a lot of computing power. Overall I was really glad to have done this project and I was honored to be able to use this simulation data to conduct my research. 
+
+\section{Acknowledgements}
+
+This simulation was made possible by using the data from \citet{2012ApJ...753....9V} and made use of Astropy \citep{astropy:2018}, Numpy \citep{5725236}, Matplotlib \citep{4160265}, and Juypter Notebook \citep{Kluyver2016JupyterN} to create the plots needed for this project. I would like to thank Professor Gurtina Belsa for all of her help throughout this entire process. She made this project possible. I would also like to thank my friends: Jimmy Lilly, Madison Walder, Mackenzie James, Sammie Mackie, and Ryan Webster who also helped me troubleshoot my code even during the quarantine. 
+
+%put the name of the .bib file in {} For this, it is Biography.bib so put %Bibliography in here
+\bibliography{Bibliography}{}
+\bibliographystyle{aasjournal}
+
+
+
+\end{document}
+
+
